@@ -8,48 +8,25 @@
     <title>Class Slideshow</title>
     <style>
 	*{ margin:0; padding:0;}
-        body {
-			/*background: url('kantor.jpeg') no-repeat center center fixed;
-  			background-size: cover;
-			*/
-			background-color:#000;
-        }
-        header {
-            background-color: rgba(0, 0, 255); /* Warna biru dengan alpha 0.5 untuk efek transparan */
-			color:#fff;
-			padding: 10px;
-			text-align: left;
-			border-bottom:4px solid #FF9900;
-				-webkit-text-stroke-width: .4px;
-  				-webkit-text-stroke-color: #009900;
-		}
-		header h1 {margin-left:150px; font-family:sans-serif;}
-        .container {
-            display: flex;
-            justify-content: center;
-			/*
-			background-color: rgba(255, 255, 255, 0.2); 
-			backdrop-filter: blur(10px);
-			*/
-			background-color:#000;
-			font-family:Poppins;
-			
-        }
-        .left-content, .right-content {
-            width: 50%;
-            box-sizing: border-box;
-        }
-		.right-content { padding:1em;}
-		.left-content{ height:670px; margin-top:10px; margin-right:10px;}
-		/*.left-content { display: flex; align-items: center; justify-content: center;}		*/
-		.tab { width:100%; }
-        footer {
-            background-color: rgb(112,112,112);
-			backdrop-filter: blur(10px);
-			position:fixed;
-			bottom:0; left:0; right:0;
-			padding: 2px;
-		}
+	body {
+	background: url('kantor.jpeg') no-repeat center center fixed;
+  	background-size: cover;
+	}
+	html, body {
+  height: 100%;
+  margin: 0;}
+
+.full-div {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+}
+.top { width:100%; height:20%; background-color:#173F5F; border-bottom:4px solid #FF9900; -webkit-text-stroke-width: .4px; -webkit-text-stroke-color: #fff; box-sizing:border-box; display:flex; flex-wrap:wrap; align-items:center;} 
+.top h1 {margin-left:50px; color:rgb(207, 207, 207); font-family:sans-serif, Arial, Helvetica; }
+.left { width:55%; height:80%; font-family:Poppins; background:rgba(0,0,0,0.3);}
+.right { width:45%; height:80%; }
 		.tab th, .tab td {
 			padding: 8px;
 			text-align: left;
@@ -107,17 +84,13 @@
 		/****************************************/
     </style>
 </head>
-<body>
-    <header>
+<body><div class="full-div">
+    <div class="top">
 		<img src="logo-kpknl.jpg" class="logo" /><h1>STANDAR PERCEPATAN WAKTU PELAYANAN<br>KANTOR PELAYANAN KEKAYAAN NEGARA DAN LELANG (KPKNL)<br>SINGKAWANG</h1>
-	</header>
-    <div class="container">
-        
-        
-        
-        <div class="right-content">
+	</div>
+    <div class="left">
             <div class="tab">
-			<table style="color:#0000FF;"><thead>
+			<table style="color:#173F5F;"><thead>
 					<tr bgcolor="#FFFF00">
 						<th width="5%">No</th>
 						<th>Jenis Layanan</th>
@@ -284,10 +257,9 @@
 			</table>
 			</div>
         </div>
-		<!--<iframe class="left-content" src="https://www.youtube.com/watch?v=XKueVSGTk2o" frameborder="0" allowfullscreen></iframe>-->
-		<iframe class="left-content" src="https://www.youtube.com/embed/XKueVSGTk2o" frameborder="0" allowfullscreen allow="autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-    </div>
+		<iframe class="right" src="https://www.youtube.com/embed/XKueVSGTk2o" frameborder="0" allowfullscreen allow="autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
+   
 
 <script>
 	var $el = $(".scroll");
@@ -327,9 +299,10 @@
         showSlide(currentIndex);
     }
 
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 5000);
     showSlide(currentIndex);
 	/////////// akhir footer //////////////
 </script>
+</div>
 </body>
 </html>
